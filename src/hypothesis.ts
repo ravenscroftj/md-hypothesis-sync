@@ -33,13 +33,18 @@ export interface Annotation {
         html: string,
         incontext: string,
         json: string
+    },
+    document:{
+        title: string[]
     }
 }
 
 interface HypothesisFetchOptions {
     user: string,
     sort?: string,
-    tags?: string
+    tags?: string,
+    limit?: number,
+    offset?: number
 }
 
 export interface HypothesisResponse{
@@ -56,4 +61,9 @@ export async function fetchAnnotationsForUser(params: HypothesisFetchOptions) {
     console.log("params", params);
 
     return (await axios.get("https://hypothes.is/api/search", {params})).data as HypothesisResponse;
+}
+
+export async function fetchUserAnnotationCount(user: string) : Promise<number> {
+    let response = await fetchAnnotationsForUser({user, limit:1});
+    return response.total;
 }
