@@ -1,0 +1,78 @@
+{
+  "name": "md-hypothesis-sync",
+  "displayName": "Markdown Hypothes.is Sync",
+  "description": "Sync your hypothes.is annotations with your markdown knowledge vault (e.g. dendron or foam)",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:md-hypothesis-sync.syncHypothesis"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "md-hypothesis-sync.syncHypothesis",
+        "title": "Sync Hypothesis Annotations"
+      }
+    ],
+    "configuration": [
+      {
+        "title": "Hypothes.is Markdown Sync",
+        "properties": {
+          "hypothesis.username": {
+            "type": "string",
+            "description": "The username of the hypothesis user that you want to sync from"
+          },
+          "hypothesis.filePattern": {
+            "type": "string",
+            "description": "The pattern that the plugin should use to store annotations.",
+            "default": "hypothesis.%DOCSLUG%.md"
+          },
+          "hypothesis.fileDir": {
+            "type": "string",
+            "description": "The subdirectory that new notes should be stored in",
+            "default": "notes"
+          }
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.74.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "@vscode/test-electron": "^2.2.0",
+    "eslint": "^8.28.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.1.0",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.9.3",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.2.3",
+    "gray-matter": "^4.0.3",
+    "mkql": "^1.0.9",
+    "slugify": "^1.6.5"
+  }
+}
