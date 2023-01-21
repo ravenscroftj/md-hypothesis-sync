@@ -88,7 +88,7 @@ async function createOrUpdateNote(filename: string, note: Annotation) {
     try{
         doc = matter.read(filename);
     }catch(err){
-        doc = matter({content: ""});
+        doc = matter("");
 
         doc.data.hypothesisURI = note.uri;
 
@@ -244,7 +244,10 @@ export async function doHypothesisSync(user: string) {
 
                         fmap.set(note.uri, fullname);
                     }
+                    
+                    progress.report({message: note.uri, increment: Math.floor( noteIdx / total * 100)});
 
+                    noteIdx ++;
                 }
 
             }
