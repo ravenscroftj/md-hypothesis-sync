@@ -1,6 +1,7 @@
 {
   "name": "md-hypothesis-sync",
   "displayName": "Markdown Hypothes.is Sync",
+  "repository": {"url": "https://github.com/ravenscroftj/md-hypothesis-sync"},
   "description": "Sync your hypothes.is annotations with your markdown knowledge vault (e.g. dendron or foam)",
   "version": "0.0.1",
   "engines": {
