@@ -15,11 +15,18 @@ For example if there is an image subfolder under your extension project workspac
 
 ## Extension Settings
 
+
+### General Extension Settings
+
 This extension contributes the following settings:
 
 * `hypothesis.username`: The hypothesis username of the person whose notes you want to sync
 * `hypothesis.filePattern`: The file naming convention that the generated markdown files should use. The plugin will substitute `%DOCSTUB%` for a stub representing the URL of the document being synchronised.
 * `hypothesis.fileDir` if set then the plugin will store the generated markdown files in this subdirectory of your workspace folder.
+
+### Dendron Integration
+
+* `hypothesis.dendron.callDoctor` if set then the plugin will call the [dendron doctor](https://wiki.dendron.so/notes/ZeC74FYVECsf9bpyngVMU/#fixfrontmatter)_to have it automatically add relevant metadata (e.g. id, created, updated attributes) to any newly created notes.
 
 ## Known Issues
 
