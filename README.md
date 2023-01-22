@@ -5,21 +5,15 @@ This extension allows you to download your hypothes.is annotations and store the
 ![screen recording](image/../images/screenrecording.gif)
 
 
+
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
+- Subscribe to and download a named hypothes.is user's annotations
+- out-of-the-box [Dendron](https://dendron.so) integration ensures that downloaded notes are assigned unique IDs.
+- Flexibly append new annotations to existing notes based on the `hypothesisURI` frontmatter field.
 
 ## Extension Settings
 
-
-### General Extension Settings
 
 This extension contributes the following settings:
 
@@ -29,15 +23,18 @@ This extension contributes the following settings:
 
 ### Dendron Integration
 
-* `hypothesis.dendron.callDoctor` if set then the plugin will call the [dendron doctor](https://wiki.dendron.so/notes/ZeC74FYVECsf9bpyngVMU/#fixfrontmatter)_to have it automatically add relevant metadata (e.g. id, created, updated attributes) to any newly created notes.
+* `hypothesis.dendron.callDoctor` if enabled and the [Dendron](https://dendron.so) plugin is installed then the plugin will call the [Dendron doctor](https://wiki.dendron.so/notes/ZeC74FYVECsf9bpyngVMU/#fixfrontmatter)_to have it automatically add relevant metadata (e.g. id, created, updated attributes) to any newly created notes.
 
-## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
 
 ## Release Notes
 
 Users appreciate release notes as you update your extension.
+
+### 0.0.2
+
+ - Updated the README with better description and a GIF of how the plugin works
+ 
 
 ### 0.0.1
 
