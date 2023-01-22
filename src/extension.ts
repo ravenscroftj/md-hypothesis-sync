@@ -41,14 +41,12 @@ export function activate(context: vscode.ExtensionContext) {
 
 		const config = vscode.workspace.getConfiguration();
 
-		const username = config.get("hypothesis.username");
+		const username = config.get<string>("hypothesis.username");
 
-		const filePattern = config.get("hypothesis.filePattern");
 
 		if(username){
 			//vscode.window.showInformationMessage(`Syncing Hypothesis notes from user ${username}...`, );
-			doHypothesisSync(username as string);
-
+			doHypothesisSync(username);
 		}else{
 			let response = await vscode.window.showWarningMessage("You must set your Hypothesis username before you can sync!", "Open Plugin Settings", "Dismiss");
 

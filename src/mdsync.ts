@@ -269,6 +269,17 @@ export async function doHypothesisSync(user: string) {
                 }
 
             }
+
+            // if the user has enabled dendron "call doctor" integration
+            if(config.get<boolean>('hypothesis.dendron.callDoctor')) {
+                // check that dendron is installed and enabled
+                vscode.commands.getCommands().then((commands)=>{
+                    if(commands.indexOf('dendron.dev.doctor') > -1){
+                        // if all prerequesites are true, call the doctor
+                        vscode.commands.executeCommand('dendron.dev.doctor', {action: "fixFrontmatter", scope: "workspace"});
+                    }
+                });
+            }
             
 
         });
