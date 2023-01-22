@@ -2,6 +2,9 @@
 
 This extension allows you to download your hypothes.is annotations and store them in your markdown-based knowledge vault.
 
+![screen recording](image/../images/screenrecording.gif)
+
+
 ## Features
 
 Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
@@ -36,26 +39,9 @@ Calling out known issues can help limit users opening duplicate issues against y
 
 Users appreciate release notes as you update your extension.
 
-### 1.0.0
+### 0.0.1
 
-Initial release of ...
+Initial release of the extension and initial feature set:
+ - Set your hypothesis username
+ - Use the `Sync Hypothesis Annotations` command to download all hypothesis annotations and store them as markdown notes.
 
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-
-
-**Enjoy!**
