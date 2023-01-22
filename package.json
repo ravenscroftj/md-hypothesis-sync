@@ -2,7 +2,7 @@
   "name": "md-hypothesis-sync",
   "displayName": "Markdown Hypothes.is Sync",
   "icon": "images/HypothesisIconColor.png",
-  "publisher": "James Ravenscroft",
+  "publisher": "RavenscroftSoftware",
   "repository": {"url": "https://github.com/ravenscroftj/md-hypothesis-sync"},
   "description": "Sync your hypothes.is annotations with your markdown knowledge vault (e.g. dendron or foam)",
   "keywords": ["hypothes.is", "hypothesis","annotations","notes","dendron","foam", "digital garden", "second brain"],
